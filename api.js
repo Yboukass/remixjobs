@@ -1,11 +1,13 @@
+//Scrapping
 var request=require("request");
 var cheerio=require("cheerio");
 var http= require("http");
 var Regex = require("regex");
+//Base de données
 var mongo = require('mongodb');
 var monk = require('monk');
 
-
+// Notre fonction
 function getJSON(database, table, url, callback) {
 	var db = monk(database);
 var collection = db.get(table);
